@@ -10,7 +10,7 @@ This project analyzes how market sentiment (Fear vs Greed) impacts trader perfor
 ## Dataset
 
 - **Trade data:** Trade-level records aggregated to trader-day level
-- 
+  
 - **Sentiment data:** Daily Fear–Greed index  
 
 Key features include daily PnL, trade frequency, long–short ratio, and extreme loss indicators.
@@ -51,11 +51,11 @@ Key features include daily PnL, trade frequency, long–short ratio, and extreme
 ## Key Insights
 
 - **Fear days exhibit worse performance:** Higher downside risk and more frequent extreme losses compared to Greed days.
-- 
+  
 - **Behavior becomes reactive during Fear:** Higher trade frequency combined with weaker directional conviction.
-- 
+  
 - **Frequent traders face higher volatility:** Overtrading during Fear amplifies risk.
-- 
+  
 - **Predictive signal exists:** Sentiment and behavioral features provide limited but meaningful signal for next-day outcomes.
 - 
 
@@ -75,9 +75,9 @@ Key features include daily PnL, trade frequency, long–short ratio, and extreme
 A class-weighted logistic regression model was trained to predict next-day trader profitability using:
 
 - Market sentiment
-- 
+  
 - Trade frequency
-- 
+  
 - Directional bias
 
 
