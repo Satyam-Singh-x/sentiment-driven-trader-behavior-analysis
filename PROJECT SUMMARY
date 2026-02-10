@@ -1,0 +1,35 @@
+## Project Summary
+
+### Methodology
+This project analyzes how market sentiment (Fear vs Greed) influences trader performance and behavior using trade-level data aggregated to a trader-day level. Trade data was cleaned, timestamp-aligned, and merged with a Fear–Greed sentiment index on a daily basis. Key behavioral metrics were engineered, including daily profit and loss (PnL), trade frequency, and directional bias (long–short ratio). Downside risk was approximated using a drawdown proxy defined as extreme loss days (bottom 5% of daily PnL outcomes).
+
+To extend the analysis, traders were segmented based on activity levels, and a lightweight predictive model was built to estimate next-day profitability using sentiment and behavioral features.
+
+---
+
+### Key Insights
+1. **Performance differs significantly across sentiment regimes:**  
+   Fear days are associated with lower profitability, heavier downside tails in PnL distributions, and a higher frequency of extreme loss days compared to Greed days.
+
+2. **Trader behavior becomes more reactive during Fear periods:**  
+   Fear days exhibit higher trade frequency combined with a balanced long–short ratio, indicating frequent but low-conviction position adjustments rather than strong directional bets.
+
+3. **Frequent traders face higher volatility and downside risk:**  
+   Traders with higher activity levels show wider PnL distributions and more extreme outcomes, particularly during Fear-driven market conditions, suggesting overtrading under uncertainty.
+
+4. **Sentiment and behavior contain predictive signal:**  
+   A simple class-weighted logistic regression model demonstrates that sentiment and behavioral features provide limited but meaningful signal for predicting next-day profitability, especially for identifying loss-prone periods.
+
+---
+
+### Strategy Recommendations
+1. **Reduce reactive trading during Fear days:**  
+   Given higher drawdown risk and lower win rates during Fear periods, traders—especially high-frequency traders—should reduce trade frequency and avoid excessive position adjustments to limit downside exposure.
+
+2. **Adopt focused, conviction-driven trading during Greed periods:**  
+   Greed-driven markets tend to reward structured and deliberate trading. Traders should prioritize fewer, higher-conviction trades and avoid unnecessary trade churn to better capture upside potential.
+
+---
+
+### Notes
+Leverage and account-level capital information were not available and were therefore excluded from the analysis. Findings are based on observable behavioral patterns and should be interpreted as heuristic insights rather than prescriptive trading rules.
